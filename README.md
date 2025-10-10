@@ -19,6 +19,7 @@ You may configure `tsconfig.json` like this:
 
 ```json
 {
+  // Definitely, this package supports parse from json with comments.
   "compilerOptions": {
     // ... (other compiler options)
     "baseUrl": ".",

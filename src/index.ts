@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs"
-import { resolve } from "node:path"
+import { join, resolve } from "node:path"
 import { cwd } from "node:process"
+import stripJsonComments from "strip-json-comments"
 
 /**
  * Loads tsconfig from file path or uses provided config object.
@@ -12,20 +13,12 @@ import { cwd } from "node:process"
  * @param tsconfig optional tsconfig.json path or configuration object.
  * @returns parsed tsconfig object.
  */
-export function loadTsconfig(
-  tsconfig?: string | Record<string, unknown>,
-): Record<string, unknown> {
-  if (typeof tsconfig === "string") {
-    const configPath = resolve(cwd(), tsconfig)
-    const configContent = readFileSync(configPath, "utf-8")
-    return JSON.parse(configContent)
-  } else if (tsconfig) {
-    return tsconfig
-  } else {
-    const configPath = resolve(cwd(), "tsconfig.json")
-    const configContent = readFileSync(configPath, "utf-8")
-    return JSON.parse(configContent)
+export function loadTsconfig(tsconfig?: string | Record<string, unknown>) {
+  if (!tsconfig || typeof tsconfig === "string") {
+    const path = resolve(tsconfig ? tsconfig : join(cwd(), "tsconfig.json"))
+    return JSON.parse(stripJsonComments(readFileSync(path, "utf-8")))
   }
+  return tsconfig
 }
 
 type PathOptions = {

@@ -17,6 +17,7 @@
 
 ```json
 {
+  // 本库支持解析包含注释的 tsconfig.json 文件。
   "compilerOptions": {
     // ... (其他编译器选项)
     "baseUrl": ".",

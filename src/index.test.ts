@@ -9,6 +9,7 @@ vi.mock("node:fs", () => ({
 }))
 
 vi.mock("node:path", () => ({
+  join: vi.fn((...args) => args.join("/")),
   resolve: vi.fn((...args) => {
     const path = args.join("/").replace(/\.\//g, "")
     if (path.startsWith(mockRoot)) return path
@@ -213,5 +214,79 @@ describe("parsePathMappings", () => {
 
   test("undefined compilerOptions", () => {
     expect(parsePaths()).toEqual({})
+  })
+})
+
+describe("JSON with comments", () => {
+  test("loadTsconfig handles JSON with comments", () => {
+    const jsonWithComments = `{
+      // This is a comment
+      "compilerOptions": {
+        "baseUrl": ".", // inline comment
+        "paths": {
+          "@/*": ["./src/*"]
+          /* multi-line
+             comment */
+        }
+      }
+    }`
+
+    vi.mocked(readFileSync).mockReturnValue(jsonWithComments)
+    const result = loadTsconfig("./tsconfig.json")
+
+    expect(result).toEqual({
+      compilerOptions: {
+        baseUrl: ".",
+        paths: {
+          "@/*": ["./src/*"],
+        },
+      },
+    })
+  })
+
+  test("parseTsconfigAliases works with JSON containing comments", () => {
+    const jsonWithComments = `{
+      "compilerOptions": {
+        "baseUrl": "./project",
+        // Paths configuration
+        "paths": {
+          "@/*": ["./src/*"],
+          "utils/*": ["./src/utils/*"]
+        }
+      }
+    }`
+
+    vi.mocked(readFileSync).mockReturnValue(jsonWithComments)
+    const result = parseTsconfigAliases("./tsconfig.json")
+
+    expect(result).toEqual({
+      "@": `${mockRoot}/project/src`,
+      utils: `${mockRoot}/project/src/utils`,
+    })
+  })
+
+  test("handles JSON with various comment types", () => {
+    const jsonWithComments = `{
+      "compilerOptions": {
+        "baseUrl": ".", // inline comment
+        "paths": {
+          "@/*": ["./src/*"]
+          /* multi-line
+             comment */
+        }
+      }
+    }`
+
+    vi.mocked(readFileSync).mockReturnValue(jsonWithComments)
+    const result = loadTsconfig("./tsconfig.json")
+
+    expect(result).toEqual({
+      compilerOptions: {
+        baseUrl: ".",
+        paths: {
+          "@/*": ["./src/*"],
+        },
+      },
+    })
   })
 })
