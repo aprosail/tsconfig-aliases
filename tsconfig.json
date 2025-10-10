@@ -5,6 +5,7 @@
     "moduleResolution": "bundler",
     "isolatedModules": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
 
     // Strict mode.
     "strict": true,
@@ -16,5 +17,5 @@
     "noImplicitAny": true,
     "noImplicitThis": true
   },
-  "include": ["src"]
+  "include": ["src", "rolldown.config.ts", "vitest.config.ts"]
 }
