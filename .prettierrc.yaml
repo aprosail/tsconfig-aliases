@@ -1,4 +1,2 @@
 semi: false
-
-plugins:
-  - prettier-plugin-sh
+plugins: [prettier-plugin-sh]
