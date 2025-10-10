@@ -1,7 +1,7 @@
 {
   "name": "tsconfig-aliases",
   "description": "Parse aliases from tsconfig.json for bundler configurations.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {

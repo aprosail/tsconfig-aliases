@@ -1,5 +1,11 @@
 {
   "recommendations": [
+    // Languages and frameworks.
+    "vitest.explorer",
+
+    // Configurations.
+    "redhat.vscode-yaml",
+
     // Code qualities.
     "oxc.oxc-vscode",
     "esbenp.prettier-vscode",

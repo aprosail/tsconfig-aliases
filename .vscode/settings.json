@@ -17,7 +17,7 @@
     "*.ts": "",
     "*.js": "",
     "package.json": "pnpm-lock.yaml",
-    "readme.md": "LICENSE, README_zh.md"
+    "readme.md": "LICENSE, CHANGELOG.md, README_zh.md"
   },
 
   // Output bundle visualizations.
