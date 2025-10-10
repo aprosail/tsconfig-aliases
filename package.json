@@ -1,8 +1,20 @@
 {
   "name": "tsconfig-aliases",
   "description": "Parse aliases from tsconfig.json for bundler configurations.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aprosail/tsconfig-aliases.git"
+  },
+  "keywords": [
+    "aliases",
+    "config",
+    "ts",
+    "tsconfig",
+    "tsconfig-paths"
+  ],
   "exports": {
     ".": {
       "types": "./out/index.d.ts",

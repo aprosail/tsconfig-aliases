@@ -1,7 +1,7 @@
 # TSConfig 别名解析工具
 
-[en(English)](README.md) |
-[zh(中文)](README_zh.md)
+[en(English)](./README.md) |
+[zh(中文)](./README_zh.md)
 
 从 `tsconfig.json`（或其他 tsconfig 文件）解析别名用于打包器配置。
 
@@ -101,4 +101,4 @@ export default defineConfig({
 
 ## 开源许可证
 
-本包基于 [Apache 2.0 许可证](LICENSE) 发布。
+本包基于 [Apache 2.0 许可证](./LICENSE) 发布。

@@ -1,7 +1,7 @@
 # TSConfig Aliases
 
-[en(English)](README.md) |
-[zh(中文)](README_zh.md)
+[en(English)](./README.md) |
+[zh(中文)](./README_zh.md)
 
 Parse aliases from `tsconfig.json` (or other tsconfig files)
 for bundler configurations.
@@ -103,4 +103,4 @@ export default defineConfig({
 
 ## Open Source License
 
-This package is released under the [Apache 2.0 License](LICENSE).
+This package is released under the [Apache 2.0 License](./LICENSE).
