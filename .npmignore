@@ -1,0 +1,13 @@
+# Configuration files that don't need to be published.
+.github
+.gitignore
+.gitattributes
+.oxlintrc.json
+.prettierignore
+.prettierrc.yaml
+.vscode
+pnpm-lock.yaml
+pnpm-workspace.yaml
+rolldown.config.ts
+tsconfig.json
+vitest.config.ts
