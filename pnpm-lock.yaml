@@ -16,8 +16,8 @@ importers:
         specifier: ^24.7.1
         version: 24.7.1
       current-changelog:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.1.0
+        version: 1.1.0
       oxlint:
         specifier: ^1.22.0
         version: 1.22.0
@@ -566,8 +566,8 @@ packages:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  current-changelog@1.0.0:
-    resolution: {integrity: sha512-UREdD9fWDitfmoiqbLI56gdZW1S8P45nkCE06NHvQtoGxeu/d6+ObwpAs2qUhj+wfTD/T8SXc3Lnzkzajb3w/A==}
+  current-changelog@1.1.0:
+    resolution: {integrity: sha512-8dGlstp13fVi+M29e6awY8R8/itH2BxnlYdTgh+6WC6NrV+DLGfdomdMIu3g1QIFjZO5QScpNSbshRXpbPM9Dw==}
     hasBin: true
 
   debug@4.4.3:
@@ -1216,7 +1216,7 @@ snapshots:
 
   consola@3.4.2: {}
 
-  current-changelog@1.0.0:
+  current-changelog@1.1.0:
     dependencies:
       commander: 14.0.1
       consola: 3.4.2
