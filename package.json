@@ -27,13 +27,15 @@
     "review": "prettier --check . && oxlint",
     "build": "rolldown --config rolldown.config.ts",
     "test": "vitest run",
-    "dev": "vitest"
+    "dev": "vitest",
+    "changelog": "current-changelog"
   },
   "dependencies": {
     "strip-json-comments": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^24.7.1",
+    "current-changelog": "^1.0.0",
     "oxlint": "^1.22.0",
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
