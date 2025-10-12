@@ -1,3 +1,11 @@
+## 1.1.0
+
+Support commonjs module in APIs.
+
+But as the original APIs are designed with default export, you may need to use
+`const { default: tsconfigAliases } = require("tsconfig-aliases")`
+to access the default export in CommonJS mode.
+
 ## 1.0.1
 
 1. fix: externalize dependencies, import `package.json` in `rolldown.config.ts`.

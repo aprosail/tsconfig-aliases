@@ -101,6 +101,21 @@ export default defineConfig({
 })
 ```
 
+## Compatibilities
+
+When using commonjs mode, you need to use `default`
+to access the default exported function like this:
+
+```js
+const tsconfigAliases = require("tsconfig-aliases").default
+```
+
+or:
+
+```js
+const { default: tsconfigAliases } = require("tsconfig-aliases")
+```
+
 ## Open Source License
 
 This package is released under the [Apache 2.0 License](./LICENSE).

@@ -99,6 +99,21 @@ export default defineConfig({
 })
 ```
 
+## 兼容性
+
+当使用 CommonJS 模式时，您需要使用 `default`
+来访问默认导出的函数，如下所示：
+
+```js
+const tsconfigAliases = require("tsconfig-aliases").default
+```
+
+或：
+
+```js
+const { default: tsconfigAliases } = require("tsconfig-aliases")
+```
+
 ## 开源许可证
 
 本包基于 [Apache 2.0 许可证](./LICENSE) 发布。
