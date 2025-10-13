@@ -1,5 +1,8 @@
 # TSConfig 别名解析工具
 
+此项目已经迁移到
+[rolldown-enhance](https://github.com/aporsail/rolldown-enhance) 单体仓库中。
+
 [en(English)](./README.md) |
 [zh(中文)](./README_zh.md)
 

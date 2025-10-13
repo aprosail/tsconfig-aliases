@@ -1,5 +1,8 @@
 # TSConfig Aliases
 
+Now moved inside the
+[rolldown-enhance](https://github.com/aporsail/rolldown-enhance) package.
+
 [en(English)](./README.md) |
 [zh(中文)](./README_zh.md)
 
